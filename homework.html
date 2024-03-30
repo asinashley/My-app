@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        color: blue;
+        font-size: xx-large;
+        text-align: center;
+      }
+      h2 {
+        font-size: xx-large;
+        font-weight: normal;
+        text-align: center;
+      }
+      h3 {
+        font-weight: bold;
+        font-size: larger;
+        text-align: center;
+      }
+      p {
+        color: rgb(81, 81, 81);
+        font-family: monospace;
+        font-size: large;
+        text-align: center;
+      }
+      div {
+        width: 400px;
+        margin: 0 auto;
+        padding: 15px;
+        transition: all 150ms ease-in-out;
+      }
+      div:hover {
+        background-color: #fffaef;
+        border-radius: 10px;
+      }
+      button {
+        color: white;
+        background-color: #1a58d1;
+        display: block;
+        margin: 0 auto;
+        padding: 15px 25px;
+        border: 1px solid white;
+        border-radius: 40px;
+        box-shadow: 5px 5px 5px rgba(37, 39, 89, 0.08);
+      }
+      button:hover {
+        color: #1a58d1;
+        background-color: transparent;
+        border: 1px solid #1a58d1;
+        cursor: pointer;
+      }
+      .author {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      🌤️ <br />
+      Currently 21 in Tokyo
+    </h1>
+    <h2>13° / <strong> 23°</strong></h2>
+    <div class="Tomorrow">
+      <h3>🌧️Tomorrow</h3>
+      <p>10° / <strong> 22°</strong></p>
+    </div>
+    <div class="Saturday">
+      <h3>🌥️Saturday</h3>
+      <p>15° / <strong> 17°</strong></p>
+    </div>
+    <div class="Sunday">
+      <h3>☀️Sunday</h3>
+      <p>25° /<strong> 28°</strong></p>
+    </div>
+
+    <button>Change City</button>
+    <p class="author">coded by Ashley Asin</p>
+    <script>
+      function cityTemp() {
+        let city = prompt("what city are you from?");
+        let temp = prompt("what is the temprature?");
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "😄 <br> Currently " + temp + " in " + city;
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", cityTemp);
+    </script>
+  </body>
+</html>
